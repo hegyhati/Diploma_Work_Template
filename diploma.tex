@@ -1,0 +1,65 @@
+\documentclass[12pt,a4paper,twoside,openright]{report}
+
+\usepackage{hegyhati}
+
+
+\title{ Title }
+\author{ Author Name \\\ \\Supervisor: M\'at\'e Hegyh\'ati, PhD}
+
+
+\AtEveryBibitem{\clearfield{note}}    
+\AtEveryBibitem{\clearfield{url}}    
+\AtEveryBibitem{\clearfield{eprint}}  
+
+\begin{document} 
+
+  \ChapterUnnumbered{Abstract}{Abstract}{Abstract}
+  
+   
+   
+  % List of... pretty much everything  
+    
+    \tableofcontents
+    \listoffigures 
+    \listoftables
+    \listofalgorithms
+
+  \ChapterUnnumbered{Achnowledgements}{Thanks}{Thanks}
+  \markboth{Achnowledgements}{}
+    
+  \Chapter{Introduction}{Example}
+
+  \Chapter{Literture review / similar software solutions}{Example}  
+
+  \Chapter{Problem definition / requirements \& technologies}{Example}
+
+  \Chapter{The proposed approach / developed software}{Example}
+    \Section{Part of the approach / software}{Example}
+    \Section{Another part of the approach / software}{Example}
+
+  \Chapter{Test results / User manual for the software}{Example}
+
+  \Chapter{Future work}{Example}
+
+  \Chapter{Summary}{Example}
+  
+  % Appendix
+    \appendix
+    \Chapter{Environment for comparisons}{Example}
+    \chapter{Nomenclature}
+      \Section{Part of the notation}{Example}
+      \Section{Another part of the notation}{Example}    
+
+  % References
+  \addcontentsline{toc}{chapter}{References}
+  \printbibliography
+
+  
+  % Index
+  \clearpage
+  \addcontentsline{toc}{chapter}{Index}
+  \printindex
+
+   
+
+\end{document}

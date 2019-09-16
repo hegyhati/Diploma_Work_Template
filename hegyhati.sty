@@ -1,0 +1,138 @@
+% Basic stuff for character encoding, language, etc.
+\usepackage[english]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage{t1enc}
+
+% For references
+\usepackage[autostyle]{csquotes}
+\usepackage[
+    firstinits=true,
+    maxbibnames=99,
+    backend=biber,
+    style=numeric,
+    natbib=true,
+    url=false, 
+    doi=false,
+    eprint=false
+]{biblatex}
+\addbibresource{references.bib}
+
+\usepackage{hyperref}
+
+% For figures
+\usepackage{graphicx}
+\newcommand{\Figure}[3]
+{ % \Figure{filename without extension, also labelsuffix}{caption}{options}
+  \begin{figure}[hptb]
+    \begin{center}
+      \includegraphics[#3]{Figures/#1.eps}
+      \caption{#2}
+      \label{fig_#1}
+    \end{center}
+  \end{figure}
+}
+\newcommand{\FigureShort}[4]
+{ % \Figure{filename without extension}{shortcaption}{caption}{options}
+  \begin{figure}[hptb]
+    \begin{center}
+      \includegraphics[#4]{Figures/#1.eps}
+      \caption[#2]{#3}
+      \label{fig_#1}
+    \end{center}
+  \end{figure}
+}
+
+
+% For tables
+\usepackage{multirow}
+\usepackage{longtable}
+\newcommand{\Table}[4]
+{ % \Table{labelsuffix}{caption}{column definition}{tabular content}
+  \begin{table}[hptb]
+    \begin{center}
+      \begin{tabular}{#3}
+        #4
+      \end{tabular}
+      \caption{\protect #2}
+      \label{tab_#1}      
+    \end{center}
+  \end{table} 
+}
+\newcommand{\TableShort}[5]
+{ % \Table{labelsuffix}{short caption}{caption}{column definition}{tabular content}
+  \begin{table}[hptb]
+    \begin{center}
+      \begin{tabular}{#4}
+        #5
+      \end{tabular}
+      \caption[#2]{\protect #3}
+      \label{tab_#1}      
+    \end{center}
+  \end{table} 
+}
+
+
+% For partitioning the document into several files
+\newcommand{\parts}[0]{Parts/}
+\newcommand{\Chapter}          [2]{\chapter{#1}\label{chapter_#2}\input{\parts #2.tex}}
+\newcommand{\ChapterShort}     [3]{\chapter[#1]{#2}\label{chapter_#3}\input{\parts #3.tex}}
+\newcommand{\ChapterUnnumbered}[3]{\chapter*{#2}\input{\parts #3.tex}\addcontentsline{toc}{chapter}{#1}}
+\newcommand{\Section}          [2]{\section{#1}\label{section_#2}\input{\parts #2.tex}}
+\newcommand{\SectionShort}     [3]{\section[#1]{#2}\label{section_#3}\input{\parts #3.tex}}
+\newcommand{\Subsection}       [2]{\subsection{#1}\label{subsection_#2}\input{\parts #2.tex}}
+\newcommand{\Subsubsection}    [2]{\subsubsection{#1}\label{subsubsection_#2}\input{\parts #2.tex}}
+
+
+% For math things
+\usepackage{amsmath}
+\usepackage{amssymb}
+
+
+% For description env formatting
+\usepackage{enumitem}
+\setdescription{leftmargin=2cm,labelindent=1cm}
+
+% Setting spacing and margins
+\usepackage{setspace}
+\linespread{1.2}
+\usepackage[top=1.08in, bottom=0.9in, left=0.9in, right=0.9in]{geometry}
+
+% For pseudo codes
+\usepackage[chapter]{algorithm}
+\usepackage{algorithmic}
+\newcommand{\Algorithm}[3]
+{
+  \begin{algorithm}
+    \caption{\protect #2}
+    \label{alg_#1}
+    \begin{algorithmic}
+      #3
+    \end{algorithmic}
+  \end{algorithm}
+}
+\newcommand{\AlgorithmShort}[4]
+{
+  \begin{algorithm}
+    \caption[#2]{\protect #3}
+    \label{alg_#1}
+    \begin{algorithmic}
+      #4
+    \end{algorithmic}
+  \end{algorithm}
+}
+\def \LETE {:=}
+
+
+% For emphasis
+\newcommand{\Emph}[1]{\textit{\textbf{#1}}}
+
+
+% Simple todo 
+\usepackage[usenames,dvipsnames]{color}
+\newcommand{\todo}[1]{\textcolor{red}{TODO: #1}}
+\newcommand{\todolater}[1]{\footnote{\textcolor{green}{TODO LATER: #1}}}
+  
+% For making an index
+\usepackage{makeidx}
+\makeindex
+
