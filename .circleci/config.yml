@@ -1,0 +1,17 @@
+version: 2
+
+jobs:
+  build:
+    docker:
+      - image: ubuntu:18.04
+    steps:
+      - checkout
+      - run: apt update && apt -y install texlive*
+      - run: ./compile.sh
+      - store_artifacts:
+          path: diploma.pdf
+workflows:
+  version: 2
+  main:
+    jobs:
+      - build
