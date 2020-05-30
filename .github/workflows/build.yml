@@ -9,3 +9,8 @@ jobs:
       - uses: actions/checkout@v2
       - run: echo 'Compiling LaTeX document...'
       - run: make 
+      - run: echo 'Storing artifact...'
+      - uses: actions/upload-artifact@v1
+        with:
+          name: Final document
+          path: diploma_with_cover.pdf
