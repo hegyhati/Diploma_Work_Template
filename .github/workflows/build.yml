@@ -6,5 +6,6 @@ jobs:
     runs-on: ubuntu-latest
     # container: aergus/latex
     steps:
+      - uses: actions/checkout@v2
       - run: echo 'Compiling LaTeX document...'
       - run: make 
