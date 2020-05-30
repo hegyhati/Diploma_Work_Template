@@ -1,0 +1,10 @@
+name: Build final document
+on: [push]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    # container: aergus/latex
+    steps:
+      - run: echo 'Compiling LaTeX document...'
+      - run: make 
