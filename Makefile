@@ -7,7 +7,7 @@ MAINDOCUMENT = diploma
 BIBFILE = references.bib
 FINALDOCUMENT = diploma_with_cover.pdf
 
-all: $(COVER).pdf $(MAINDOCUMENT).pdf 
+all: $(MAINDOCUMENT).pdf 
 	$(GS) -sOutputFile=$(FINALDOCUMENT) $(COVER).pdf $(MAINDOCUMENT).pdf 
 
 spell::
