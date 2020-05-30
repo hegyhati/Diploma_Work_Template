@@ -7,10 +7,6 @@
 \author{ Author Name \\\ \\Supervisor: M\'at\'e Hegyh\'ati, PhD}
 
 
-\AtEveryBibitem{\clearfield{note}}    
-\AtEveryBibitem{\clearfield{url}}    
-\AtEveryBibitem{\clearfield{eprint}}  
-
 \begin{document} 
 
   \ChapterUnnumbered{Abstract}{Abstract}{Abstract}
@@ -30,6 +26,7 @@
   \Chapter{Introduction}{Example}
 
   \Chapter{Literture review / similar software solutions}{Example}  
+  Do a lot of citation here\cite{Sanmarti2002}.
 
   \Chapter{Problem definition / requirements \& technologies}{Example}
 
@@ -52,14 +49,7 @@
 
   % References
   \addcontentsline{toc}{chapter}{References}
-  \printbibliography
-
-  
-  % Index
-  \clearpage
-  \addcontentsline{toc}{chapter}{Index}
-  \printindex
-
-   
+  \bibliography{references}
+  \bibliographystyle{plain}
 
 \end{document}
