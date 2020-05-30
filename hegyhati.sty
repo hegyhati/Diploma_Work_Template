@@ -17,10 +17,13 @@
 % For emphasis
 \newcommand{\Emph}[1]{\textit{\textbf{#1}}}
 
+% For file/class/function/variable names
+\newcommand{\CodeName}[1]{\texttt{\textbf{#1}}}
+
 % Simple todo 
 \usepackage[usenames,dvipsnames]{color}
-\newcommand{\todo}[1]{\textcolor{red}{TODO: #1}}
-\newcommand{\todolater}[1]{\footnote{\textcolor{green}{TODO LATER: #1}}}
+\newcommand{\Todo}[1]{\textcolor{red}{TODO: #1}}
+\newcommand{\TodoLater}[1]{\footnote{\textcolor{green}{TODO LATER: #1}}}
 
 % Basic stuff for character encoding, language, etc.
 \usepackage[english]{babel}
@@ -59,7 +62,7 @@
 
 
 % For tables
-%\usepackage{multirow}
+\usepackage{multirow}
 \usepackage{longtable}
 \newcommand{\Table}[4]
 { % \Table{labelsuffix}{caption}{column definition}{tabular content}
@@ -111,12 +114,3 @@
   \end{algorithm}
 }
 \def \LETE {:=}
-
-
-
-
-
-
-  
-
-

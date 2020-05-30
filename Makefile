@@ -23,3 +23,6 @@ $(MAINDOCUMENT).pdf: $(MAINDOCUMENT).tex $(MAINDOCUMENT).bbl
 $(MAINDOCUMENT).bbl: $(MAINDOCUMENT).tex $(BIBFILE)
 	$(TEX) $(MAINDOCUMENT)
 	$(BIB) $(MAINDOCUMENT)
+
+docker-all::
+	docker run --rm -v ${PWD}:/project -w /project hegyhati/diploma-latex:latest make
