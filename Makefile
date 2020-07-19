@@ -3,9 +3,9 @@ BIB = bibtex
 GS = gs -q -dNOPAUSE -dBATCH -sDEVICE=pdfwrite 
 
 COVER = cover
-MAINDOCUMENT = diploma
+MAINDOCUMENT = thesis
 BIBFILE = references.bib
-FINALDOCUMENT = diploma_with_cover.pdf
+FINALDOCUMENT = thesis_with_cover.pdf
 
 all: $(MAINDOCUMENT).pdf 
 	$(GS) -sOutputFile=$(FINALDOCUMENT) $(COVER).pdf $(MAINDOCUMENT).pdf 

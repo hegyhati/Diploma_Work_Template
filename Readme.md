@@ -7,7 +7,7 @@ The thesis related files:
 File/Directory  |  Purpose
 ----|----
 [`hegyhati.sty`](hegyhati.sty)  |  Contains the includes for the necessary packages and several useful macros (see below)
-[`diploma.tex`](diploma.tex)  |  The "master" LaTeX file, that is compiled
+[`thesis.tex`](thesis.tex)  |  The "master" LaTeX file, that is compiled
 [`references.bib`](references.bib) | BibTeX file for references
 [`cover.pdf`](cover.pdf) | Cover pages formatted according to the University requirements
 [`Parts/`](Parts/) | Directory of LaTeX files for chapters, sections, etc.
@@ -30,7 +30,7 @@ If you have a Linux-based system, simply run `make`, and it will:
  - run `pdflatex`
  - run `bibtex`
  - run `pdflatex` twice
- - merge `cover.pdf` and the generated `diploma.pdf` into a single `diploma_with_cover.pdf` 
+ - merge `cover.pdf` and the generated `thesis.pdf` into a single `thesis_with_cover.pdf` 
 
 To get rid of the generated files (pdf included) simply run `make clean`.
 
@@ -51,7 +51,7 @@ make docker-all
 
 ## The "GitHub way" 
 
-Just push the changes to the repository, and [this simple workflow](.github/workflows/build.yml) will build it for you, and `diploma_with_cover.pdf` will be available as an artifact.
+Just push the changes to the repository, and [this simple workflow](.github/workflows/build.yml) will build it for you, and `thesis_with_cover.pdf` will be available as an artifact.
 
 # Extending the build environment
 
