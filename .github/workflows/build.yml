@@ -13,4 +13,4 @@ jobs:
       - uses: actions/upload-artifact@v1
         with:
           name: Final document
-          path: diploma_with_cover.pdf
+          path: thesis_with_cover.pdf

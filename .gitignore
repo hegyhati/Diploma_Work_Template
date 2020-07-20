@@ -3,6 +3,8 @@
 *.bcf
 *.blg
 *.dvi
+*.fdb_latexmk
+*.fls
 *.idx
 *.ilg
 *.ind
@@ -14,6 +16,7 @@
 *.pdf
 *.ps
 *.run.xml
+*.synctex.gz
 *.toc
 
 !cover.pdf
