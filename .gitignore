@@ -18,5 +18,5 @@
 *.run.xml
 *.synctex.gz
 *.toc
-
+.idea/
 !cover.pdf
