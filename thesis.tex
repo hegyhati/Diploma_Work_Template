@@ -6,26 +6,27 @@
 \title{ Title }
 \author{ Author Name \\\ \\Supervisor: Máté Hegyháti, PhD}
 
+\bibliography{references}
 
-\begin{document} 
+\begin{document}
 
   \ChapterUnnumbered{Abstract}{Abstract}{Abstract}
-  
-   
-   
-  % List of... pretty much everything  
-    
+
+
+
+  % List of... pretty much everything
+
     \tableofcontents
-    \listoffigures 
+    \listoffigures
     \listoftables
     \listofalgorithms
 
   \ChapterUnnumbered{Acknowledgments}{Thanks}{Thanks}
   \markboth{Achnowledgements}{}
-    
+
   \Chapter{Introduction}{Example}
 
-  \Chapter{Literature review / similar software solutions}{Example}  
+  \Chapter{Literature review / similar software solutions}{Example}
   Do a lot of citation here\cite{Sanmarti2002}.
 
   \Chapter{Problem definition / requirements \& technologies}{Example}
@@ -39,17 +40,15 @@
   \Chapter{Future work}{Example}
 
   \Chapter{Summary}{Example}
-  
+
   % Appendix
     \appendix
     \Chapter{Environment for comparisons}{Example}
     \chapter{Nomenclature}
       \Section{Part of the notation}{Example}
-      \Section{Another part of the notation}{Example}    
+      \Section{Another part of the notation}{Example}
 
-  % References
-  \addcontentsline{toc}{chapter}{References}
-  \bibliography{references}
-  \bibliographystyle{plain}
+  % Bibliography
+  \printbibliography[heading=bibintoc]
 
 \end{document}

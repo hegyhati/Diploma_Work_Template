@@ -20,7 +20,7 @@
 % For file/class/function/variable names
 \newcommand{\CodeName}[1]{\texttt{\textbf{#1}}}
 
-% Simple todo 
+% Simple todo
 \usepackage[usenames,dvipsnames]{color}
 \newcommand{\Todo}[1]{\textcolor{red}{TODO: #1}}
 \newcommand{\TodoLater}[1]{\footnote{\textcolor{green}{TODO LATER: #1}}}
@@ -32,6 +32,15 @@
 
 % For hyper references
 \usepackage{hyperref}
+\hypersetup{
+    colorlinks,
+    linkcolor={blue},
+    citecolor={blue},
+    urlcolor={blue}
+}
+
+% For bibliography
+\usepackage[giveninits=true,isbn=false]{biblatex}
 
 % For math things
 \usepackage{amsmath}
@@ -72,9 +81,9 @@
         #4
       \end{tabular}
       \caption{\protect #2}
-      \label{tab_#1}      
+      \label{tab_#1}
     \end{center}
-  \end{table} 
+  \end{table}
 }
 \newcommand{\TableShort}[5]
 { % \Table{labelsuffix}{short caption}{caption}{column definition}{tabular content}
@@ -84,9 +93,9 @@
         #5
       \end{tabular}
       \caption[#2]{\protect #3}
-      \label{tab_#1}      
+      \label{tab_#1}
     \end{center}
-  \end{table} 
+  \end{table}
 }
 
 
