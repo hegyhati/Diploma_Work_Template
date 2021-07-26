@@ -1,5 +1,5 @@
 TEX = pdflatex -interaction nonstopmode
-BIB = bibtex
+BIB = biber
 GS = gs -q -dNOPAUSE -dBATCH -sDEVICE=pdfwrite
 
 COVER = cover
